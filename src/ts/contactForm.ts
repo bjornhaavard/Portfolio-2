@@ -4,9 +4,9 @@ interface FormResponse {
 }
 
 export function setupContactForm(): void {
-    const contactForm: HTMLFormElement | null = document.querySelector('#contact-form');
+    const contactForm: HTMLFormElement | null = document.querySelector('#contactForm');
     const submitButton: HTMLButtonElement | null = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
-    const successMessage: HTMLDivElement | null = document.querySelector('#success-message');
+    const successMessage: HTMLDivElement | null = document.querySelector('#successMessage');
 
     if (!contactForm || !submitButton || !successMessage) {
         console.error('Required form elements not found');

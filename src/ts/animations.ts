@@ -1,7 +1,7 @@
 export function setupAnimations(): void {
-    console.log('Setting up animations...');
+
     const animatedElements: NodeListOf<HTMLElement> = document.querySelectorAll('.project-card, .skill-item, .timeline-item, .tech-card');
-    console.log('Found elements:', animatedElements.length);
+    
 
     // Set initial styles
     animatedElements.forEach((element: HTMLElement) => {
@@ -13,8 +13,7 @@ export function setupAnimations(): void {
     const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry: IntersectionObserverEntry) => {
             const target = entry.target as HTMLElement;
-            console.log('Element intersecting:', entry.isIntersecting);
-            
+
             if (entry.isIntersecting) {
                 requestAnimationFrame(() => {
                     target.style.opacity = '1';
@@ -35,6 +34,6 @@ export function setupAnimations(): void {
     // Start observing elements
     animatedElements.forEach((element: HTMLElement) => {
         observer.observe(element);
-        console.log('Observing element:', element.className);
+        
     });
 }
