@@ -1,7 +1,7 @@
 export function setupContactForm() {
-    const contactForm = document.querySelector('#contact-form');
+    const contactForm = document.querySelector('#contactForm');
     const submitButton = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
-    const successMessage = document.querySelector('#success-message');
+    const successMessage = document.querySelector('#successMessage');
     if (!contactForm || !submitButton || !successMessage) {
         console.error('Required form elements not found');
         return;
