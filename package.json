@@ -4,6 +4,7 @@
   "description": "My portfolio",
   "main": "script.js",
   "scripts": {
+    "deploy:docs": "rm -rf docs && mkdir docs && cp index.html docs/ && cp -r css docs/ && cp -r dist docs/ && cp -r images docs/" ,
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css",
     "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --watch",
