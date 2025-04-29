@@ -5,7 +5,7 @@ export function setupAnimations(): void {
 
     // Set initial styles
     animatedElements.forEach((element: HTMLElement) => {
-        element.style.opacity = '0';
+        element.style.opacity = '5';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'all 0.6s ease-out';
     });
