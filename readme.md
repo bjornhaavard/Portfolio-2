@@ -75,9 +75,9 @@ Portfolio-2/
 
 🔗 Links
 
-Live Demo: Portfolio Website
+- Live Demo: [Portfolio Website](https://bjornhaavard.github.io/Portfolio-2/)
 
-GitHub Repository: bjornhaavard/Portfolio-2
+- GitHub Repository: [bjornhaavard/Portfolio-2](https://github.com/bjornhaavard/Portfolio-2)
 
 📝 License
 This project is open source and available under the MIT License.
