@@ -1,5 +1,7 @@
 # Portfolio Website
 
+![Portfolio Screenshot](images/portfolio-screenshot.png)
+
 A modern, responsive portfolio website built with HTML, Tailwind CSS, and TypeScript. This portfolio showcases my projects, skills, and professional experience with a clean, minimalist design.
 
 ## 🌟 Features
@@ -43,7 +45,9 @@ A modern, responsive portfolio website built with HTML, Tailwind CSS, and TypeSc
    ```bash
    npm run deploy:docs
 
+
 🚀 Deployment
+
 This project is configured to deploy to GitHub Pages from the docs folder. After making changes:
 
 1. Build the project:
