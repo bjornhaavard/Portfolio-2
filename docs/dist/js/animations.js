@@ -2,7 +2,7 @@ export function setupAnimations() {
     const animatedElements = document.querySelectorAll('.project-card, .skill-item, .timeline-item, .tech-card');
     // Set initial styles
     animatedElements.forEach((element) => {
-        element.style.opacity = '0';
+        element.style.opacity = '5';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'all 0.6s ease-out';
     });
@@ -30,4 +30,12 @@ export function setupAnimations() {
     animatedElements.forEach((element) => {
         observer.observe(element);
     });
+}
+// animated scrool function for the view work button
+export function scrollToProjects(e) {
+    e.preventDefault();
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }

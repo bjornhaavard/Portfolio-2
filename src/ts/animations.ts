@@ -1,3 +1,5 @@
+
+
 export function setupAnimations(): void {
 
     const animatedElements: NodeListOf<HTMLElement> = document.querySelectorAll('.project-card, .skill-item, .timeline-item, .tech-card');
@@ -36,4 +38,14 @@ export function setupAnimations(): void {
         observer.observe(element);
         
     });
+}
+
+// animated scrool function for the view work button
+
+export function scrollToProjects(e: Event): void {
+    e.preventDefault();
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }

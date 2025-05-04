@@ -8,6 +8,32 @@ export function setupContactForm() {
     }
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        // Get form field values
+        const nameInput = contactForm.querySelector('#name');
+        const emailInput = contactForm.querySelector('#email');
+        const messageInput = contactForm.querySelector('#message');
+        // Clear previous errors
+        document.querySelectorAll('.validation-error').forEach(el => el.remove());
+        let isValid = true;
+        // Validate name
+        if (nameInput && nameInput.value.trim().length < 3) {
+            showError(nameInput, 'Name must be at least 3 characters.');
+            isValid = false;
+        }
+        // Validate email
+        if (emailInput && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+            showError(emailInput, 'Please enter a valid email address.');
+            isValid = false;
+        }
+        // Validate message
+        if (messageInput && messageInput.value.trim().length < 5) {
+            showError(messageInput, 'Message must be at least 5 characters.');
+            isValid = false;
+        }
+        if (!isValid) {
+            submitButton.disabled = false;
+            return;
+        }
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
         try {
@@ -33,4 +59,12 @@ export function setupContactForm() {
             submitButton.textContent = 'Send Message';
         }
     });
+}
+;
+// Helper function to show error in the form input
+function showError(input, message) {
+    const error = document.createElement('div');
+    error.textContent = message;
+    error.className = 'validation-error text-red-500 text-sm mt-1';
+    input.parentElement?.appendChild(error);
 }

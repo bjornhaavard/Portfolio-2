@@ -20,6 +20,7 @@ module.exports = {
     'via-transparent',
     'to-black/50',
     'bg-black/90',
+    "text-red-500",
   ],
   theme: {
     extend: {

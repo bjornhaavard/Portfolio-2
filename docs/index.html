@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    
     <script defer type="module" src="dist/js/main.js"></script>
     <link href="./css/styles.css" rel="stylesheet">
 </head>
@@ -251,7 +252,7 @@
                 </svg>
             </button>
             <h2 class="text-2xl font-bold text-green-400 mb-6">Get in Touch</h2>
-            <form id="contactForm" action="https://formspree.io/f/xgvkoavw" method="POST" class="space-y-6">
+            <form id="contactForm" action="https://formspree.io/f/xgvkoavw" novalidate method="POST" class="space-y-6">
                 <!-- Success message (hidden by default) -->
                 <div id="successMessage" class="hidden p-4 mb-4 text-green-400 bg-green-400/10 rounded-lg">
                     Message sent successfully! I'll get back to you soon.
@@ -358,7 +359,7 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
         function scrollToProjects(e) {
             e.preventDefault();
             const projectsSection = document.getElementById('projects');
@@ -367,7 +368,7 @@
                 block: 'start'
             });
         }
-    </script>
+    </script> -->
    
 </body>
 </html>

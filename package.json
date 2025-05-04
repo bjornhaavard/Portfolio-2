@@ -4,14 +4,14 @@
   "description": "My portfolio",
   "main": "script.js",
   "scripts": {
-    "deploy:docs": "rm -rf docs && mkdir docs && cp index.html docs/ && cp -r css docs/ && cp -r dist docs/ && cp -r images docs/" ,
-  
+    "deploy:docs": "rm -rf docs && mkdir docs && cp index.html docs/ && cp -r css docs/ && cp -r dist docs/ && cp -r images docs/",
     "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css",
     "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --watch",
     "build:ts": "tsc",
     "watch:ts": "tsc --watch",
     "build": "npm run build:ts && npm run build:css",
-    "dev": "concurrently \"npm run watch:ts\" \"npm run watch:css\""
+    "dev": "concurrently \"npm run watch:ts\" \"npm run watch:css\"",
+    "deploy": "npm run build && npm run deploy:docs"
   },
   "repository": {
     "type": "git",
