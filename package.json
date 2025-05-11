@@ -4,16 +4,17 @@
   "description": "My portfolio",
   "main": "script.js",
   "scripts": {
-    "deploy:docs": "rmdir /s /q docs 2>nul || mkdir docs && xcopy /e /i /y index.html docs\\ && xcopy /e /i /y css docs\\ && xcopy /e /i /y dist docs\\ && xcopy /e /i /y images docs\\",
+    "deploy:docs": "rm -rf docs && mkdir -p docs && cp -r index.html docs/ && cp -r css docs/ && cp -r dist/js docs/js && cp -r images docs/",
     "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css",
     "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --watch",
     "build:ts": "tsc",
-    "watch:ts": "tsc --watch",
-    "build": "npm run build:ts && npm run build:css && npm run format:dist",
-    "format:dist": "prettier --write \"docs/dist/**/*.js\"",
-    "dev": "concurrently \"npm run watch:ts\" \"npm run watch:css\"",
-    "deploy": "npm run build && npm run deploy:docs"
-  },
+      "watch:ts": "tsc --watch",
+      "copy:js": "mkdir docs\\js 2>nul && xcopy /e /i /y dist\\js\\* docs\\js",
+      "build": "npm run build:ts && npm run build:css && npm run copy:js && npm run format:dist",
+      "format:dist": "prettier --write \"docs/js/**/*.js\"",
+      "dev": "concurrently \"npm run watch:ts\" \"npm run watch:css\"",
+      "deploy": "npm run build && npm run deploy:docs"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bjornhaavard/Portfolio-2.git"
@@ -31,6 +32,7 @@
     "concurrently": "^8.2.2",
     "postcss": "^8.4.33",
     "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
