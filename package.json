@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "My portfolio",
   "main": "script.js",
-"scripts": {
+  "scripts": {
     "deploy:docs": "rmdir /s /q docs 2>nul || mkdir docs && xcopy /e /i /y index.html docs\\ && xcopy /e /i /y css docs\\ && xcopy /e /i /y dist docs\\ && xcopy /e /i /y images docs\\",
-    "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css && type ./css/tailwind-output.css ./css/styles.css > ./css/styles.css.new && move /y ./css/styles.css.new ./css/styles.css && del /f /q ./css/tailwind-output.css",
-    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --watch",
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css",
+    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --watch",
     "build:ts": "tsc",
     "watch:ts": "tsc --watch",
     "build": "npm run build:ts && npm run build:css && npm run format:dist",
