@@ -1292,3 +1292,42 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Code animation for the hero section */
+
+.code-animation {
+  position: relative;
+  bottom: 20px;
+  left: 20%;
+  overflow: hidden;
+  height: 130px;
+  width: 300px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+
+.code-line {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  color: #a5d6a7;
+  white-space: pre;
+  animation: typing 9s steps(40, end) infinite, blink-caret .75s step-end;
+  overflow: hidden;
+  border-right: .15em solid #2ecc71;
+  padding: 0 0.5em;
+  margin: 0.5em 0;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  44% { width: 100% } /* 4 seconds out of 9 seconds */
+  100% { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #2ecc71 }
+}
