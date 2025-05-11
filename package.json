@@ -4,9 +4,10 @@
   "description": "My portfolio",
   "main": "script.js",
   "scripts": {
-    "deploy:docs": "rmdir /s /q docs 2>nul && mkdir docs && mkdir docs\\css && mkdir docs\\dist\\js && mkdir docs\\images && copy index.html docs\\ && xcopy /e /i /y css docs\\css && xcopy /e /i /y dist\\js docs\\dist\\js && xcopy /e /i /y images docs\\images",
-    "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css",
-    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --watch",
+    "deploy:docs": "rmdir /s /q docs 2>nul && mkdir docs && mkdir docs\\css && mkdir docs\\dist\\js && mkdir docs\\images && copy index.html docs\\ && copy css\\tailwind.css docs\\css\\ && copy css\\styles.css docs\\css\\ && xcopy /e /i /y dist\\js docs\\dist\\js && xcopy /e /i /y images docs\\images",
+    "clean": "rmdir /s /q docs 2>nul && rmdir /s /q dist 2>nul",
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./docs/css/styles.css",
+    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./docs/css/styles.css --watch",
     "build:ts": "tsc",
       "watch:ts": "tsc --watch",
       "copy:js": "mkdir docs\\js 2>nul && xcopy /e /i /y dist\\js\\* docs\\js",
