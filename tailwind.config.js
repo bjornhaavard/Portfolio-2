@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./script.js",
-    "./styles.css",
+    "./css/styles.css",
   ],
   safelist: [
     'bg-black',
@@ -21,6 +21,11 @@ module.exports = {
     'to-black/50',
     'bg-black/90',
     "text-red-500",
+    /* Add your custom classes here */
+    'code-animation',
+    'code-line',
+    'typing',
+    'blink-caret'
   ],
   theme: {
     extend: {
@@ -29,17 +34,12 @@ module.exports = {
         white: '#ffffff',
         transparent: 'transparent',
         green: {
-          400: '#34d399',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-        },
-        zinc: {
-          900: '#18181b',
-        },
-        gray: {
-          400: '#9ca3af',
-        },
+          400: '#a5d6a7',
+          500: '#2ecc71',
+        }
+      },
+      fontFamily: {
+        'fira-code': ['Fira Code', 'monospace'],
       },
     },
   },
