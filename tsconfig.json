@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist/js",
-    "rootDir": "./src/ts"
+    "rootDir": "./src/ts" 
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
